@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0" />
+    <link rel="stylesheet" href="trmPro.css" />
+    <script src="trmPro.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="section">
+      <h1>Number Base Convertor</h1>
+      <div id="div1">
+        <label for="input">Enter number please : </label>
+        <input type="text" id="input" value="0101" />
+      </div>
+      <div id="div2">
+        <select id="options">
+          <option value="bintodec">Binary to Decimal</option>
+          <option value="bintooct">Binary to Octa</option>
+          <option value="bintohex">Binary to Hexa</option>
+          <option value="dectobin">Decimal to Binary</option>
+          <option value="dectooct">Decimal to Octa</option>
+          <option value="dectohex">Decimal to Hexa</option>
+          <option value="octtobin">Octa to Binary</option>
+          <option value="octtodec">Octa to Decimal</option>
+          <option value="octtohex">Octa to Hexa</option>
+          <option value="hextobin">Hex to Binary</option>
+          <option value="hextodec">Hex to Decimal</option>
+          <option value="hextooct">Hex to Octa</option>
+        </select>
+        <button id="btn" onclick="option()">Convert</button>
+      </div>
+      <div id="div3">
+        <label>Result : </label>
+        <label for="result" id="result"></label>
+      </div>
+    </section>
+  </body>
+</html>
