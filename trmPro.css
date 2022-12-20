@@ -2,13 +2,14 @@ body {
   background-color: antiquewhite;
   text-align: center;
   font-family: "Roboto", sans-serif;
-  font-size: 30px;
+  font-size: 25px;
 }
+
 #section {
   background-color: dimgrey;
   margin-top: 50px;
-  margin-left: 500px;
-  margin-right: 500px;
+  margin-left: 350px;
+  margin-right: 350px;
   margin-bottom: 50px;
   padding: 50px 10px 140px 10px;
   border-radius: 40px;
@@ -22,7 +23,10 @@ body {
   padding: 12px;
   font-size: 20px;
 }
-
+#options {
+  padding: 12px;
+  font-size: 20px;
+}
 #div2 {
   margin-top: 20px;
   margin-bottom: 30px;
@@ -37,6 +41,7 @@ body {
 }
 #result {
   color: chocolate;
+  background-color: antiquewhite;
 }
 #problems {
   color: tomato;
@@ -63,13 +68,19 @@ body {
         } */
 
   #input {
+    margin-top: 12px;
+    width: 120px;
     padding: 0.1px;
-    padding-left: 0.1px;
+    font-size: 16px;
+  }
+
+  #options {
+    padding: 3px;
     font-size: 16px;
   }
 
   #div2 {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 30px;
   }
   #bases {
@@ -77,7 +88,8 @@ body {
     font-size: 16px;
   }
   #btn {
-    padding: 1px;
+    margin-top: 5px;
+    padding: 3px;
     font-size: 16px;
   }
   #result {
