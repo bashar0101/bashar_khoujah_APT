@@ -1,7 +1,7 @@
 {
     "name": "Base Convertor",
     "short_name": "Base Cnvr",
-    "start_url": ".",
+    "start_url": "./termProject.html",
     "display": "standalone",
     "background_color": "#fff",
     "description": "convertor between numrical bases.",
