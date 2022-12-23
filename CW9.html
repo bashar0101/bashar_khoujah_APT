@@ -94,14 +94,35 @@
           this.image = img;
           this.horzintalFlip = this.hor_flip.bind(this);
         }
-
         hor_flip() {
-          let x = -1,
-            y = 1;
-          this.context.translate(x + this.W, y);
-          this.context.scale(x, y);
-          this.context.drawImage(this.image, 0, 0);
+          const imageData = this.context.getImageData(0, 0, this.W, this.H);
+          const data = imageData.data;
+
+          const flippedData = [];
+
+          for (let row = 0; row < this.H; row++) {
+            for (let col = 0; col < this.W; col++) {
+              const i = (row * this.W + col) * 4;
+              const j = (row * this.W + (this.W - col - 1)) * 4;
+
+              flippedData[i] = data[j];
+              flippedData[i + 1] = data[j + 1];
+              flippedData[i + 2] = data[j + 2];
+              flippedData[i + 3] = data[j + 3];
+            }
+          }
+
+          imageData.data.set(flippedData);
+
+          this.context.putImageData(imageData, 0, 0);
         }
+        // hor_flip() {
+        //   let x = -1,
+        //     y = 1;
+        //   this.context.translate(x + this.W, y);
+        //   this.context.scale(x, y);
+        //   this.context.drawImage(this.image, 0, 0);
+        // }
         loadImage(url) {
           img.src = url;
         }
@@ -148,3 +169,26 @@
     </script>
   </body>
 </html>
+
+<!-- flipHorizontal() {
+          const imageData = this.context.getImageData(0, 0, this.W, this.H);
+          const data = imageData.data;
+
+          const flippedData = [];
+
+          for (let row = 0; row < this.H; row++) {
+            for (let col = 0; col < this.W; col++) {
+              const i = (row * this.W + col) * 4;
+              const j = (row * this.W + (this.W - col - 1)) * 4;
+
+              flippedData[i] = data[j];
+              flippedData[i + 1] = data[j + 1];
+              flippedData[i + 2] = data[j + 2];
+              flippedData[i + 3] = data[j + 3];
+            }
+          }
+
+          imageData.data.set(flippedData);
+
+          this.context.putImageData(imageData, 0, 0);
+        }  -->
