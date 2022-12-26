@@ -17,7 +17,7 @@
         <input type="text" id="input" value="0101" />
       </div>
       <div id="div2">
-        <select id="options">
+        <select id="options" onchange="option()">
           <option value="bintodec">Binary to Decimal</option>
           <option value="bintooct">Binary to Octa</option>
           <option value="bintohex">Binary to Hexa</option>
@@ -31,7 +31,6 @@
           <option value="hextodec">Hex to Decimal</option>
           <option value="hextooct">Hex to Octa</option>
         </select>
-        <button id="btn" onclick="option()">Convert</button>
       </div>
       <div id="div3">
         <label>Result : </label>
